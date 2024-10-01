@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% block title %}Транспорт{% endblock %}
+{% block content %}
+    <div class="textblock" style="width:90%">
+        <a class="button" href="/vehicles?page={{ page-1 }}&search={{ search }}">⇦</a><input value="{{ page }}" type="number" id="page"><a class="button" href="/vehicles?page={{ page+1 }}&search={{ search }}">⇨</a>
+        <input value="{{ search }}" type="text" id="search" placeholder="Поиск">
+        <h1>Транспорт</h1>
+        {% for vehicle in vehicles %}
+            {% if vehicle.downloaded %}
+                <a href="/vehicle?id={{ vehicle.id }}"><div class="textblock" style="width: 25%;background: rgba(100,200,100,0.2)">
+                    <h3>{{ vehicle.title }}</h3>
+                    <img src="{{vehicle.imageurl}}" style="border-radius: 20px"><br>
+                    <p>{{ vehicle.author }}</p>
+                    <a href="/deletevehicle?id={{ vehicle.id }}&redirect=vehicles" class="button">Удалить</a>
+                </div></a>
+            {% else %}
+                <a href="/vehicle?id={{ vehicle.id }}"><div class="textblock" style="width: 25%">
+                    <h3>{{ vehicle.title }}</h3>
+                    <img src="{{vehicle.imageurl}}" style="border-radius: 20px"><br>
+                    <p>{{ vehicle.author }}</p>
+                    <a href="/downloadvehicle?id={{ vehicle.id }}&redirect=vehicles" class="button" onclick="dowloadprocess()">Скачать</a><br>
+                </div></a>
+            {% endif %}
+        {% endfor %}
+        <script src="../static/mods.js">
+        </script>
+    </div>
+{% endblock %}
