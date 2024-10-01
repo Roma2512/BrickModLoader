@@ -1,10 +1,9 @@
 # BrickModLoader
-Mod Loader for Brick Rigs. The application loads and previews builds via steam and steamcmd<br>
-# Installation help:<br>
- 1) Download the installer (setup.exe).<br>
- 2) Download Python.<br>
- 3) Run the installer (setup.exe)<br>
- 4) Now you can use.<br>
- 
-# The application can:<br>
-download, delete and view technician created and published in steam<br>
+Загрузчик модов для Brick Rigs. Приложение загружает и просматривает сборки через steam и steamcmd.<br>
+# Помощь при установке:<br>
+1) Скачайте программу установки (setup.exe).<br>
+2) Скачайте Python.<br>
+3) Запустите программу установки (setup.exe).<br>
+4) Теперь вы можете использовать приложение.<br>
+# Приложение может:<br>
+загружать, удалять и просматривать техники, созданные и опубликованные в steam<br>
